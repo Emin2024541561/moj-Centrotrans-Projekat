@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prijava korisnika</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Barlow Semi Condensed', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            margin-right: 175px;
+            display: flex;
+        }
+
+        .breadcrumb {
+            margin-bottom: 20px;
+            color: #7b858d;
+
+        }
+
+        .breadcrumb a {
+            font-size: 15px;
+            font-family: 'Barlow Semi Condensed', sans-serif;
+            text-decoration: none;
+            color: #7b858d;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .form-section {
+            width: 60%;
+            background-color: #fff;
+            padding: 20px;
+            padding-right: 0px;
+            border-radius: 5px;
+        }
+
+        .form-section h1 {
+            font-size: 31px;
+            font-family: 'Barlow Condensed', sans-serif;
+            margin-bottom: 10px;
+            font-weight: 500;
+            line-height: 1.2;
+            color: #212529;
+        }
+
+        .form-section p {
+            font-family: 'Barlow Semi Condensed', sans-serif;
+            margin: 10px 0 10px;
+            max-width: 700px;
+            width: 600px;
+            font-size: 20px;
+            font-weight: 300;
+        }
+
+        .social-login {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .social-login button {
+            font-family: 'Barlow Semi Condensed', sans-serif;
+            width: 585px;
+            height: 37px;
+            font-size: 16px;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Centriranje */
+            gap: 10px; /* Razmak između slike i teksta */
+        }
+
+        .social-login .google {
+            background-color: #dc3545;
+            margin: 5px 0px;
+        }
+
+        .social-login .facebook {
+            background-color: #0d6efd;
+            margin-bottom: 38px;
+        }
+
+        .social-login button img {
+            width: 16px; /* Veličina slike */
+            height: 16px;
+        }
+
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-family: 'Barlow Semi Condensed', sans-serif;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 6px 12px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-group input:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        .form-group a {
+            font-size: 14px;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .form-group a:hover {
+            text-decoration: underline;
+        }
+
+        .submit-btn {
+            font-family: 'Barlow Semi Condensed', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            background-color: #0d6efd;
+            color: #fff;
+            padding: 10px;
+            margin-top: 60px;
+            margin-bottom: 15px;
+            font-size: 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 20%;
+        }
+
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .register-section {
+            width: 35%;
+            background-color: #fff;
+            padding: 20px;
+            padding-left: 0px;
+            padding-top: 35px;
+            padding-right: 150px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        .register-section h2 {
+            font-size: 31px;
+            font-family: 'Barlow Condensed', sans-serif;
+            margin-bottom: 10px;
+            font-weight: 500;
+            line-height: 1.2;
+            color: #212529;
+        }
+
+        .register-section p{
+            font-family: 'Barlow Semi Condensed', sans-serif;
+            margin: 10px 0 30px;
+            max-width: 700px;
+            font-size: 20px;
+            font-weight: 300;
+        }
+        .form-section a{
+            font-family: 'Barlow Semi Condensed', sans-serif;
+            font-size: 16px;
+            color: #0d6efd;
+            margin-top: 10px;
+
+        }
+
+        .register-section ul {
+            /*dodaje crne tacke kao nabrajanje disc inside*/
+            list-style: disc inside;
+            padding: 0;
+            margin: 0 0 20px 0;
+        }
+
+        .register-section ul li {
+            font-family: 'Barlow Semi Condensed', sans-serif;
+            font-size: 16px;
+            line-height: 1.3;
+            margin-left: 10px;
+            
+        }
+
+        .register-section .register-btn {
+            display: inline-block;
+            background-color: #0d6efd;
+            color: #fff;
+            padding: 8px 16px;
+            font-size: 20px;
+            margin-top: 15px;
+            text-decoration: none;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .register-section .register-btn:hover {
+            background-color: #0056b3;
+        }
+    
+    
+
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Logo -->
+        <a href="index.html"><img src="images/centroLogo.png" alt="nema logo-a" class="logo"></a>
+    
+        <nav>
+            <!-- Gornji text  -->
+            <ul class="top-nav">
+                <li><a href="mjesecne.html" style="font-size: 14px;">Mjesečne karte</a></li>
+                <li><a href="" style="font-size: 14px">Karijera</a></li>
+                <li class="flag-container">
+                    <img src="images/ba.png" alt="BiH zastava" class="flag" width="20px" height="20px">
+                    <a href="" style="font-size: 14px">Bosnia and Herzegovina</a>
+                </li>
+                <!-- padajuci meni  -->
+                <ul class="dropdown">
+                    <li><a href="#">BAM <i class="padajuciMeni"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">BAM</a></li>
+                            <li><a href="#">EUR</a></li>
+                        </ul>
+                    </li>
+                </ul>                
+                <ul class="dropdown">
+                    <li><a href="#">BA <i class="padajuciMeni"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">BA</a></li>
+                            <li><a href="#">EN</a></li>
+                            <li><a href="#">DE</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                            </ul>
+    
+            <!-- Donji text nava -->
+            <ul class="bottom-nav">
+                <li><a href="questions.html"style="font-size: 18px;font-family: 'Barlow Condensed', sans-serif;">Odaberi putovanje</a></li>
+                <li><a href="kupuj.html"style="font-size: 18px;font-family: 'Barlow Condensed', sans-serif;">Kupi i putuj</a></li>
+                <li><a href="destinacije.html"style="font-size: 18px;font-family: 'Barlow Condensed', sans-serif;">Otkrij destinacije</a></li>
+                <li class="flag-container">
+                    <img src="images/icons8-user-30.png" alt="User"  width="20px" height="20px">
+                    <a href="prijavaKorisnika.html"style="font-size: 18px;font-family: 'Barlow Condensed', sans-serif;">moj.Centrotrans</a>                
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+
+    <div class="container">
+        <div class="form-section">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> / <a href="#">moj.Centrotrans</a>
+            </div>
+            <h1>Prijava korisnika</h1>
+            <p>Prijavite se i iskoristite sve pogodnosti koje vam pruža moj.Centrotrans.</p>
+            <div class="social-login">
+                <button class="social-button google"><img src="/images/googleicon.svg" alt="Google Logo">Prijava putem Google računa</button>
+                <button class="social-button facebook"><img src="/images/fejs2icon.svg" alt="Facebook Logo">Prijava putem Facebook računa</button>        
+            </div>
+            <form>
+                <div class="form-group">
+                    <label for="email">E-mail adresa:*</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Korisnička šifra:*</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="submit-btn"><img src="/images/icons8-user-30.png" alt="" width="20px" height="20px"> Prijavi me</button>
+                <a href="#">Zaboravili ste korisničku šifru?</a>
+            </form>
+        </div>
+
+        <div class="register-section">
+            <h2>Novi korisnik</h2>
+            <p>Zašto se registrovati?</p>
+            <ul>
+                <li>brža i lakša kupovina</li>
+                <li>lakše korištenje na više uređaja</li>
+                <li>posebne ponude i akcije</li>
+                <li>i mnoge druge pogodnosti...</li>
+            </ul>
+            <a href="#" class="register-btn">Registrujte se</a>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="left">
+            <h1>Putujte s osmijehom!</h1>
+            <p>Putujte brzo i jednostavno uz Centrotrans mobilnu platformu! Uštedite vrijeme i izbjegnite gužve na blagajnama. Kupite svoju kartu u nekoliko klikova, bilo kada i bilo gdje.</p>
+            <div class="store-buttons">
+                <a href="https://play.google.com/store/apps/details?id=com.kentkart.centrotransbus&hl=hr&pli=1">
+                    <img src="images/googleplay.png" alt="Get it on Google Play">
+                </a>
+                <a href="https://apps.apple.com/hr/app/centrocard/id1483773456">
+                    <img src="images/appstore.png" alt="Download on the App Store">
+                </a>
+            </div>
+            <div class="qr-code">
+                <img src="images/app_qr_code.svg" alt="QR Code">
+            </div>
+        </div>
+        <div class="right">
+            <img src="images/centroAplikacija.png" alt="telefon">
+        </div>
+    </div>
+    
+    <!-- KRAJ SEKCIJE  -->
+    
+    
+    
+    <!-- SEKCIJA STANICE -->
+    
+    <div class="footer-section">
+        <div>
+          <h3>Putovanje</h3>
+          <ul>
+            <li>Putovanje u Austriju</li>
+            <li>Putovanje u Crnu Goru</li>
+            <li>Putovanje u Češku</li>
+            <li>Putovanje u Francusku</li>
+            <li>Putovanje u Hrvatsku</li>
+            <li>Putovanje u Njemačku</li>
+            <li>Putovanje u Slovačku</li>
+            <li>Putovanje u Sloveniju</li>
+            <li>Putovanje u Srbiju</li>
+            <li>Putovanje u Bosnu i Hercegovinu</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Autobuske linije</h3>
+          <ul>
+            <li>Sarajevo - Beč</li>
+            <li>Sarajevo - Pariz</li>
+            <li>Sarajevo - Hamburg</li>
+            <li>Sarajevo - Dortmund</li>
+            <li>Sarajevo - Bremen</li>
+            <li>Sarajevo - Ljubljana</li>
+            <li>Sarajevo - Zagreb</li>
+            <li>Sarajevo - Split</li>
+            <li>Sarajevo - Dubrovnik</li>
+            <li>Sarajevo - Ulcinj</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Autobuske karte</h3>
+          <ul>
+            <li>Autobus za Banja Luku</li>
+            <li>Autobus za Bihać</li>
+            <li>Autobus za Bijeljinu</li>
+            <li>Autobus za Brčko</li>
+            <li>Autobus za Bugojno</li>
+            <li>Autobus za Goražde</li>
+            <li>Autobus za Gradačac</li>
+            <li>Autobus za Mostar</li>
+            <li>Autobus za Tuzlu</li>
+            <li>Autobus za Zenicu</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Servisi i usluge</h3>
+          <ul>
+            <li>Centrotours</li>
+            <li>Centrotrade</li>
+            <li>Centrotrans PGS</li>
+            <li>Autoškola Centrotrans</li>
+            <li>CentroShop</li>
+            <li>Centroservis</li>
+            <li>Centar za edukaciju - CeC</li>
+            <li>Štamparija</li>
+            <li>Centrotrans I. Sarajevo</li>
+          </ul>
+        </div>
+      </div>
+    
+    <!-- KRAJ SEKCIJE  -->
+    
+    
+    <!-- FOOTER -->
+    <!-- ZADNJI DIO  -->
+    
+      <div class="prijavaKorisnika">
+        <div class="sekcija">
+            <h3 style="padding-left: 100px;">Prijava korisnika</h3>
+            <p>Kako bi lakše obavili kupovinu karte možete se prijaviti.</p>
+            <p>Ukoliko još nemate <b>moj.Centrotrans</b> račun, isti možete kreirati <a href="#"><b>ovdje</b></a>.</p>
+            <a href="#" class="dugme123">Prijava korisnika</a>
+        </div>
+    
+        <div class="sekcija">
+            <h3 style="padding-left:245px">Kupci</h3>
+            <ul class="lista-kupci" style="padding-left:245px">
+                <li><a href="#">Korisnička podrška</a></li>
+                <li><a href="#">Vaše mišljenje</a></li>
+                <li><a href="#">Često postavljana pitanja</a></li>
+                <li><a href="#">Sigurnost plaćanja</a></li>
+                <li><a href="#">Politika privatnosti</a></li>
+                <li><a href="#">Opšti uslovi poslovanja</a></li>
+                <li><a href="#">Opšti uslovi CentroCard</a></li>
+            </ul>
+        </div>
+    
+        <div class="sekcija">
+            <h3>Centrotrans</h3>
+            <ul class="lista-centrotrans">
+                <li><a href="#">O kompaniji</a></li>
+                <li><a href="#">Press</a></li>
+                <li><a href="#">Ljudski resursi</a></li>
+                <li><a href="#">Kontakt</a></li>
+            </ul>
+    
+            <div class="ikone-društvenih-mreža">
+               <a href="https://www.facebook.com/centrotrans.official">
+                <img src="images/icon_facebook.svg" alt="fb" class="ikona-mreže">
+               </a>
+               <a href="https://www.instagram.com/centrotrans.official/"> 
+                <img src="images/icon_instagram.svg" alt="insta" class="ikona-mreže">
+               </a>
+            </div>
+        </div>
+    </div>
+    
+    
+    <!-- OVAJ DIO JE NA SVAKOJ STRANICI ISTI  -->
+    
+      <div class="footer-bottom">
+        <div>
+          <p>Copyright (c) Centrotrans d.d. Sarajevo. Sva prava zadržana.Web development Promotim</p>
+        </div>
+        <div class="payment-methods">
+            <a href=https://www.unicredit.ba/ba/stanovnistvo.html>
+              <img src="images/payweb.png" alt="payweb">
+            </a>
+            <a href=https://www.mastercard.ba/bs-ba.html>
+              <img src="images/mastercard.png" alt="Mastercard">
+            </a>
+            <a href=https://www.mastercard.ba/bs-ba.html>
+              <img src="images/maestro.png" alt="Maestro">
+            </a>
+            <a href=https://www.visasoutheasteurope.com/bosnia-n-herzegovina.html>
+              <img src="images/visa.png" alt="Visa">
+            </a>
+          </div>
+          
+      </div>
+</body>
+</html>

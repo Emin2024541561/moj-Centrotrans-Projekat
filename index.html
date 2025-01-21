@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centrotrans</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="styles.css">
+
+
+    
+</head>
+<body>
+    <header>
+        <!-- Logo -->
+         <a href="index.html"><img src="images/centroLogo.png" alt="nema logo-a" class="logo"></a>
+        
+         <nav>
+            <!-- Gornji text  -->
+            <ul class="top-nav">
+                <li><a href="mjesecne.html" style="font-size: 14px;">Mjesečne karte</a></li>
+                <li><a href="" style="font-size: 14px">Karijera</a></li>
+                <li class="flag-container">
+                    <img src="images/ba.png" alt="BiH zastava" class="flag" width="20px" height="20px">
+                    <a href="" style="font-size: 14px">Bosnia and Herzegovina</a>
+                </li>
+                <!-- padajuci meni  -->
+                <ul class="dropdown">
+                    <li><a href="#">BAM <i class="padajuciMeni fas fa-chevron-down"></i></a><!-- UBACUJEM STRELICU KOJU SAM LINKOVANO POZVAO  -->
+                        <ul class="dropdown-menu">
+                            <li><a href="#">BAM</a></li>
+                            <li><a href="#">EUR</a></li>
+                        </ul>
+                    </li>
+                </ul>                
+                <ul class="dropdown">
+                    <li><a href="#">BA <i class="padajuciMeni fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">BA</a></li>
+                            <li><a href="#">EN</a></li>
+                            <li><a href="#">DE</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                            </ul>
+    
+            <!-- Donji text nava -->
+            <ul class="bottom-nav">
+                <li><a href="questions.html"style="font-size: 18px;font-family: 'Barlow Condensed', sans-serif;">Odaberi putovanje</a></li>
+                <li><a href="kupuj.html"style="font-size: 18px;font-family: 'Barlow Condensed', sans-serif;">Kupi i putuj</a></li>
+                <li><a href="destinacije.html"style="font-size: 18px;font-family: 'Barlow Condensed', sans-serif;">Otkrij destinacije</a></li>
+                <li class="flag-container">
+                    <img src="images/icons8-user-30.png" alt="User"  width="20px" height="20px">
+                    <a href="prijavaKorisnika.html"style="font-size: 18px;font-family: 'Barlow Condensed', sans-serif;">moj.Centrotrans</a>                
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero">
+        <div class="search-overlay">
+            <!-- pozadina  -->
+            <img src="images/autobusPočetna.jpg" alt="Ne učitava se" width="1600px" height="900px" >
+        </div>
+    </section>
+    <!-- ovdje kreće dio za pretragu  -->
+    <section class="search-container">
+        <div class="radio-buttons">
+            <!-- koristio type radio i checked sytle kako bi postigao izgled original sa stranice  -->
+            <label><input type="radio" name="ticket-type" checked style="color: #212529;"> Jednosmjerna karta</label>
+            <label><input type="radio" name="ticket-type" style="color: #212529;"> Povratna karta</label>
+        </div>
+        <br>
+        <!-- ovdje se upisuju stanice  -->
+        <div class="input-field">
+            <span>POLAZNA STANICA</span>
+            <input type="text" placeholder=""style="border: none;outline: none; background: none;">
+        </div>
+        
+        <button class="swap-button">&#8644;</button> <!-- Kod sa googla za sliku strelica  -->
+        <!-- ovdje se upisuju stanice  -->
+        <div class="input-field">
+            <span>ODREDIŠNA STANICA</span>
+            <input type="text" placeholder="" style="border: none;outline: none; background: none;">
+        </div>
+        
+        <!-- ovdje se bira datum  -->
+        <div class="date-field">
+            <span style="color: #0d6efd">POLAZAK</span>
+            <input type="date" id="departure-date" required style="border: none;outline: none; background: none;">
+        </div>
+        <!-- ovdje prazan datum  -->
+        <div class="date-field">
+            <span style="color: #0d6efd;">POVRATAK</span>
+            <input type="date" id="return-date" required disabled style="border: none;outline: none; background: none;">
+        </div>
+
+
+
+<!-- OVDJE JAVA SKRIPT KOD ZA DATUM  -->
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+    // SELEKT
+    const departureDate = document.getElementById("departure-date");
+    const returnDate = document.getElementById("return-date");
+
+    // FORMAT DATUMA
+    const today = new Date();
+    const formattedDate = today.toISOString().split("T")[0];
+    departureDate.value = formattedDate;
+
+    // POLJE "povratak" PRAZNO
+    returnDate.value = "";
+});
+        </script>
+    <!-- KRAJ SKRIPTR  -->
+
+        
+    <!-- SEKCIJA DUGMETA TRAZI  -->
+        <div class="checkbox-container">
+            <input type="checkbox" id="open-return">
+            <label for="open-return">Otvoreni datum povratka</label>
+        </div>
+    
+        <button class="search-button">Traži</button>
+    <!-- KRAJ SEKCIJE  -->
+
+
+
+
+
+    <!-- NOVA SEKCIJA -->
+     <!-- ovo su male ikone  -->
+    </section>
+    <div class="image-container">
+        <div class="image-item">
+            <img src="images/123wifi.png" alt="Wi-Fi" style="filter: brightness(98%);">        <!-- regulisana svjetlost ikonice  -->
+            <p class="image-text">BESPLATAN WI-FI</p>
+            <p class="image-description">Iskoristite svoju vožnju autobusom za produktivnost i zabavu uz besplatni WiFi</p>
+
+        </div>
+        <div class="image-item">
+            <img src="images/maliBus2.svg" alt="Autobus">
+            <p class="image-text">UDOBNI AUTOBUSI</p>
+            <p class="image-description">Uživajte u udobnim i klimatizovanim vozilima naših modernih autobusa</p>
+
+        </div>
+        <div class="image-item">
+            <img src="images/parkic.svg" alt="Ekološki autobus">
+            <p class="image-text">EKOLOŠKI PRIHVATLJIVO</p>
+            <p class="image-description">Ekološki prihvatljivi autobusi Centrotransa imaju nizak ugljični otisak</p>
+
+        </div>
+        <div class="image-item">
+            <img src="images/korpica.svg" alt="Kupovina karte" >
+            <p class="image-text">JEDNOSTAVNA KUPOVINA</p>
+            <p class="image-description">Jednostavno i sigurno do autobusne karte putem naše web stranice</p>
+
+        </div>
+    </div>
+    <!-- KRAJ SEKCIJE  -->
+
+
+
+
+    <!-- NOVOSTI  -->
+     <!-- ovo je dio za novosti(slike+tekst)  -->
+    <div class="kontejner-slika">
+        <div class="stavka-slike">
+            <img src="images/15januar.jpg" alt="1">
+            <p class="datum-slike">15. januar 2025.</p>
+            <p class="tekst-slike">Obilježili smo Dan vozača i automehaničara</p>
+            <p class="opis-slike">Ovaj poseban dan je prilika da se oda priznanje svim vozačima i automehaničarima koji svojim radom osiguravaju svakodnevno funkcionisanje javnog prijevoza.</p>
+            <button class="dugme-detaljnije">Detaljnije</button>
+        </div>
+        <div class="stavka-slike">
+            <img src="images/31dec.jpg" alt="2">
+            <p class="datum-slike">31. decembar 2024.</p>
+            <p class="tekst-slike">Tradicionalno novogodišnje druženje</p>
+            <p class="opis-slike">Opraštamo se od 2024. godine, a pozdravljamo 2025.</p>
+            <button class="dugme-detaljnije">Detaljnije</button>
+        </div>
+        <div class="stavka-slike">
+            <img src="images/28dec.jpg" alt="3">
+            <p class="datum-slike">28. decembar 2024.</p>
+            <p class="tekst-slike">Djed Mraz u Centrotransu: Radost mališana i praznična čarolija</p>
+            <p class="opis-slike">Tradicionalna podjela paketića za djecu članova Sindikata Centrotransa i ove godine donijela je osmijehe i veselje u našu kompaniju.</p>
+            <button class="dugme-detaljnije">Detaljnije</button>
+        </div>
+        <div class="stavka-slike">
+            <img src="images/27dec.jpg" alt="4">
+            <p class="datum-slike">28. decembar 2024.</p>
+            <p class="tekst-slike">Centrotransova tradicija dijeljenja paketića</p>
+            <p class="opis-slike">Sa svojim prepoznatljivim oldtimer autobusom i Djed Mrazom, Centrotrans je obradovao djecu širom grada dijeljenjem paketića, stvarajući pravu prazničnu čaroliju.</p>
+            <button class="dugme-detaljnije">Detaljnije</button>
+        </div>
+    </div>
+    <!-- KRAJ SEKCIJE  -->
+
+
+
+
+    <!-- NOVA SEKCIJA -->
+    <!-- OBAVJEŠTENJA (bez slika)  -->
+    <p class="obavještenje">Obavještenja i informacije</p>
+<div class="kontejner-slika">
+    <div class="stavka-slike">
+        <p class="datum-slike">31. decembar 2024.</p>
+        <p class="tekst-slike">Mjesečne karte za januar 2025. godine</p>
+        <p class="opis-slike">Prodaja mjesečnih karata za javni gradski prijevoz u Kantonu Sarajevo počinje u petak, 03.01.2025. i završava se u petak 10.01.2025. godine.</p>
+    </div>
+    <div class="stavka-slike">
+        <p class="datum-slike">31. decembar 2024.</p>
+        <p class="tekst-slike">Obavijest za putnike: Praznični red vožnje povodom novogodišnjih praznika</p>
+        <p class="opis-slike">Povodom novogodišnjih praznika, gradske i prigradske linije kompanije Centrotrans saobraćat će prema nedjeljnom redu vožnje u srijedu 01.01.2025. i četvrtak 02.01.2025. godine.</p>
+    </div>
+    <div class="stavka-slike">
+        <p class="datum-slike">30. decembar 2024.</p>
+        <p class="tekst-slike">Obavijest za putnike: Izmjene u odvijanju javnog gradskog prijevoza</p>
+        <p class="opis-slike">Obavještavamo putnike da će doći do izmjene u režimu saobraćanja javnog gradskog prijevoza 30.12. i 31.12.2024. godine.</p>
+    </div>
+    <div class="stavka-slike">
+        <p class="datum-slike">27. decembar 2024.</p>
+        <p class="tekst-slike">Obavještenje o sazivanju Vanredne Skupštine dioničara Centrotrans d.d. Sarajevo</p>
+        <p class="opis-slike">Na osnovu odredbi članova 229. i 230. Zakona o privrednim društvima Federacije BiH („Službene novine Federacije BiH“, broj 81/15) i člana 49. Statuta Centrotrans d.d. Sarajevo, sa sjedištem u Sarajevu ul. Kurta Schorka br. 14., Nadzorni odbor Društva dana 23.12.2024. godine, donosi:</p>
+    </div>
+</div>
+<!-- KRAJ SEKCIJE  -->
+
+
+
+
+<!-- NOVA SEKCIJA  -->
+<!-- ovdje krece kolaz pet slika -->
+
+<p class="obavještenje">Popularne destinacije</p>
+<div class="slike-kontejner">
+    <div class="slika velika">
+        <img src="images/beč.jpg" alt="Beč">
+        <div class="tekst-okvir">
+            <p class="već" style="font-size: 16px; padding-left: 40px;">već od</p>
+            <p class="cijena" style="font-size: 28px; padding-left: 40px;">96,00 KM</p>
+            <h3 style="font-size: 40px; padding-left: 40px;">Beč</h3>
+            <p class="opis" style="padding-left: 40px;">Otkrijte čaroliju kulturne prijestolnice starog kontinenta!</p>
+            <button class="dugmić">Detaljnije</button>
+        </div>
+    </div>
+    <div class="slike-male">
+        <div class="slika mala">
+            <img src="images/bratislava.jpg" alt="Bratislava">
+            <div class="tekst-okvir">
+                <p class="već" >već od</p>
+                <p class="cijena">125,00 KM</p>
+                <h3>Bratislava</h3>
+            </div>
+        </div>
+        <div class="slika mala">
+            <img src="images/prag.jpg" alt="Prag">
+            <div class="tekst-okvir">
+                <p class="već">već od</p>
+                <p class="cijena">145,00 KM</p>
+                <h3>Prag</h3>
+            </div>
+        </div>
+        <div class="slika mala">
+            <img src="images/minhen.jpg" alt="Minhen">
+            <div class="tekst-okvir">
+                <p class="već">već od</p>
+                <p class="cijena">106,00 KM</p>
+                <h3>Minhen</h3>
+            </div>
+        </div>
+        <div class="slika mala">
+            <img src="images/franfurkt.jpg" alt="Frankfurt">
+            <div class="tekst-okvir">
+                <p class="već">već od</p>
+                <p class="cijena">145,00 KM</p>
+                <h3>Frankfurt</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- KRAJ SEKCIJE  -->
+
+
+
+<!-- SEKCIJA (TEKST GDJE SVE PUTUJU)  -->
+
+<div class="layout">
+    <div class="text-section">
+        <h1>Autobuske karte za destinacije širom Evrope</h1>
+        <p>Putovanje autobusom kroz Europu je jedinstveno iskustvo koje obuhvata uživanje u bogatoj historiji, raznolikoj kulturi i tradiciji. Ako ste u potrazi za nezaboravnim avanturama i želite istražiti različite dijelove Evrope, Centrotrans je pravi izbor.</p>
+        <p>Naši luksuzni autobusi saobraćaju u 10 evropskih zemalja:</p>
+        <p style="color: blue; text-decoration: underline;">AUSTRIJA, BOSNA I HERCEGOVINA, ČEŠKA, CRNA GORA, FRANCUSKA, HRVATSKA, NJEMAČKA, SLOVAČKA, SLOVENIJA i SRBIJA .</p>
+
+    </div>
+    <div class="image-section">
+        <img src="images/europe.svg" alt="EU">
+    </div>
+</div>
+
+<!-- KRAJ SEKCIJE  -->
+
+
+
+<!-- PLAVA SEKCIJA  -->
+ <!-- slika telefona i tekst  -->
+
+<div class="section">
+    <div class="left">
+        <h1>Putujte s osmijehom!</h1>
+        <p>Putujte brzo i jednostavno uz Centrotrans mobilnu platformu! Uštedite vrijeme i izbjegnite gužve na blagajnama. Kupite svoju kartu u nekoliko klikova, bilo kada i bilo gdje.</p>
+        <div class="store-buttons">
+            <a href="https://play.google.com/store/apps/details?id=com.kentkart.centrotransbus&hl=hr&pli=1">
+                <img src="images/googleplay.png" alt="Google Play">
+            </a>
+            <a href="https://apps.apple.com/hr/app/centrocard/id1483773456">
+                <img src="images/appstore.png" alt="App Store">
+            </a>
+        </div>
+        <div class="qr-code">
+            <img src="images/app_qr_code.svg" alt="QR Code">
+        </div>
+    </div>
+    <div class="right">
+        <img src="images/centroAplikacija.png" alt="telefon">
+    </div>
+</div>
+
+<!-- KRAJ SEKCIJE  -->
+
+
+
+<!-- SEKCIJA STANICE -->
+
+<div class="footer-section">
+    <div>
+      <h3>Putovanje</h3>
+      <ul>
+        <li>Putovanje u Austriju</li>
+        <li>Putovanje u Crnu Goru</li>
+        <li>Putovanje u Češku</li>
+        <li>Putovanje u Francusku</li>
+        <li>Putovanje u Hrvatsku</li>
+        <li>Putovanje u Njemačku</li>
+        <li>Putovanje u Slovačku</li>
+        <li>Putovanje u Sloveniju</li>
+        <li>Putovanje u Srbiju</li>
+        <li>Putovanje u Bosnu i Hercegovinu</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Autobuske linije</h3>
+      <ul>
+        <li>Sarajevo - Beč</li>
+        <li>Sarajevo - Pariz</li>
+        <li>Sarajevo - Hamburg</li>
+        <li>Sarajevo - Dortmund</li>
+        <li>Sarajevo - Bremen</li>
+        <li>Sarajevo - Ljubljana</li>
+        <li>Sarajevo - Zagreb</li>
+        <li>Sarajevo - Split</li>
+        <li>Sarajevo - Dubrovnik</li>
+        <li>Sarajevo - Ulcinj</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Autobuske karte</h3>
+      <ul>
+        <li>Autobus za Banja Luku</li>
+        <li>Autobus za Bihać</li>
+        <li>Autobus za Bijeljinu</li>
+        <li>Autobus za Brčko</li>
+        <li>Autobus za Bugojno</li>
+        <li>Autobus za Goražde</li>
+        <li>Autobus za Gradačac</li>
+        <li>Autobus za Mostar</li>
+        <li>Autobus za Tuzlu</li>
+        <li>Autobus za Zenicu</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Servisi i usluge</h3>
+      <ul>
+        <li>Centrotours</li>
+        <li>Centrotrade</li>
+        <li>Centrotrans PGS</li>
+        <li>Autoškola Centrotrans</li>
+        <li>CentroShop</li>
+        <li>Centroservis</li>
+        <li>Centar za edukaciju - CeC</li>
+        <li>Štamparija</li>
+        <li>Centrotrans I. Sarajevo</li>
+      </ul>
+    </div>
+  </div>
+
+<!-- KRAJ SEKCIJE  -->
+
+
+<!-- FOOTER -->
+<!-- ZADNJI DIO  -->
+
+  <div class="prijavaKorisnika">
+    <div class="sekcija">
+        <h3 style="padding-left: 100px;">Prijava korisnika</h3>
+        <p>Kako bi lakše obavili kupovinu karte možete se prijaviti.</p>
+        <p>Ukoliko još nemate <b>moj.Centrotrans</b> račun, isti možete kreirati <a href="#"><b>ovdje</b></a>.</p>
+        <a href="#" class="dugme123">Prijava korisnika</a>
+    </div>
+
+    <div class="sekcija">
+        <h3 style="padding-left:245px">Kupci</h3>
+        <ul class="lista-kupci" style="padding-left:245px">
+            <li><a href="#">Korisnička podrška</a></li>
+            <li><a href="#">Vaše mišljenje</a></li>
+            <li><a href="#">Često postavljana pitanja</a></li>
+            <li><a href="#">Sigurnost plaćanja</a></li>
+            <li><a href="#">Politika privatnosti</a></li>
+            <li><a href="#">Opšti uslovi poslovanja</a></li>
+            <li><a href="#">Opšti uslovi CentroCard</a></li>
+        </ul>
+    </div>
+
+    <div class="sekcija">
+        <h3>Centrotrans</h3>
+        <ul class="lista-centrotrans">
+            <li><a href="#">O kompaniji</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Ljudski resursi</a></li>
+            <li><a href="#">Kontakt</a></li>
+        </ul>
+
+        <div class="ikone-društvenih-mreža">
+           <a href="https://www.facebook.com/centrotrans.official">
+            <img src="images/icon_facebook.svg" alt="fb" class="ikona-mreže">
+           </a>
+           <a href="https://www.instagram.com/centrotrans.official/"> 
+            <img src="images/icon_instagram.svg" alt="insta" class="ikona-mreže">
+           </a>
+        </div>
+    </div>
+</div>
+
+
+<!-- OVAJ DIO JE NA SVAKOJ STRANICI ISTI  -->
+
+  <div class="footer-bottom">
+    <div>
+      <p>Copyright (c) Centrotrans d.d. Sarajevo. Sva prava zadržana.Web development Promotim</p>
+    </div>
+    <div class="payment-methods">
+        <a href=https://www.unicredit.ba/ba/stanovnistvo.html>
+          <img src="images/payweb.png" alt="payweb">
+        </a>
+        <a href=https://www.mastercard.ba/bs-ba.html>
+          <img src="images/mastercard.png" alt="Mastercard">
+        </a>
+        <a href=https://www.mastercard.ba/bs-ba.html>
+          <img src="images/maestro.png" alt="Maestro">
+        </a>
+        <a href=https://www.visasoutheasteurope.com/bosnia-n-herzegovina.html>
+          <img src="images/visa.png" alt="Visa">
+        </a>
+      </div>
+      
+  </div>
+<!-- KRAJ SEKCIJE  -->
+    
+</body>
+</html>
