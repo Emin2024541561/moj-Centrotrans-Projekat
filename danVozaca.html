@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Obilježili smo Dan vozača i automehaničara</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" type="image/png" href="images/logoTab-removebg-preview.png">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: 'Barlow Semi Condensed', sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      color: #212529;
+      background-color: #fff;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      margin-left: 105px;
+      margin-top: 48px;
+      background: #fff;
+    }
+
+    h1 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 38px;
+      width: 850px;
+      font-weight: 500;
+      color: #212529;
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-top: 0;
+    }
+    .prvaKlasa{
+        font-size: 20px;
+        font-weight: 300;
+        max-width: 650px;
+    }
+
+    .date {
+      font-size: 16px;
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+
+    .content img {
+      max-width: 100%;
+      height: auto;
+      margin: 20px 0;
+    }
+
+    .content p {
+      margin-top: 0;
+      text-align: justify;
+      margin-bottom: 15px;
+    }
+
+    .sidebar {
+      margin-top: 20px;
+    }
+
+    .sidebar h3 {
+      font-size: 18px;
+      margin-top: 0;
+      font-weight: normal;
+      margin-bottom: 10px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .sidebar ul li {
+      margin-bottom: 10px;
+    }
+
+    .sidebar ul li a {
+      text-decoration: none;
+      color: #0066cc;
+    }
+
+    .sidebar ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .flex-container {
+      display: flex;
+      gap: 20px;
+    }
+
+    .main-content {
+      flex: 2;
+    }
+
+    .sidebar {
+      flex: 1;
+    }
+
+
+
+    .kutijica {
+            font-size: 15px;
+            color: #7b858d;
+            margin: 20px 20px 0 20px;
+            margin-left: 105px;
+            margin-top: 48px ;
+            padding-bottom: 0px;
+            display: block;           
+            align-items: flex-start; 
+            flex-wrap: wrap;         /* omogucava prelazak na sljedeći red ako je potrebno */
+        }
+
+    .kutijica a {
+            text-decoration: none;
+            color: #7b858d;
+        }
+
+    .kutijica a:hover {
+            text-decoration: underline;
+        }
+  </style>
+</head>
+<body>
+    <header>
+        <!-- Logo -->
+         <a href="index.html"><img src="images/centroLogo.png" alt="nema logo-a" class="logo"></a>
+        
+         <nav>
+            <!-- Gornji text  -->
+            <ul class="top-nav">
+                <li><a href="mjesecne.html" style="font-size: 14px;">Mjesečne karte</a></li>
+                <li><a href="" style="font-size: 14px">Karijera</a></li>
+                <li class="flag-container">
+                    <img src="images/ba.png" alt="BiH zastava" class="flag" width="20px" height="20px">
+                    <a href="" style="font-size: 14px">Bosnia and Herzegovina</a>
+                </li>
+                <!-- padajuci meni  -->
+                <ul class="dropdown">
+                    <li><a href="#">BAM <i class="padajuciMeni fas fa-chevron-down"></i></a><!-- UBACUJEM STRELICU KOJU SAM LINKOVANO POZVAO  -->
+                        <ul class="dropdown-menu">
+                            <li><a href="#">BAM</a></li>
+                            <li><a href="#">EUR</a></li>
+                        </ul>
+                    </li>
+                </ul>                
+                <ul class="dropdown">
+                    <li><a href="#">BA <i class="padajuciMeni fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">BA</a></li>
+                            <li><a href="#">EN</a></li>
+                            <li><a href="#">DE</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                            </ul>
+    
+            <!-- Donji text nava -->
+            <ul class="bottom-nav">
+                <li><a href="questions.html"style="font-size: 18px;font-family: 'Barlow Condensed', sans-serif;">Odaberi putovanje</a></li>
+                <li><a href="kupuj.html"style="font-size: 18px;font-family: 'Barlow Condensed', sans-serif;">Kupi i putuj</a></li>
+                <li><a href="destinacije.html"style="font-size: 18px;font-family: 'Barlow Condensed', sans-serif;">Otkrij destinacije</a></li>
+                <li class="flag-container">
+                    <img src="images/icons8-user-30.png" alt="User"  width="20px" height="20px">
+                    <a href="prijavaKorisnika.html"style="font-size: 18px;font-family: 'Barlow Condensed', sans-serif;">moj.Centrotrans</a>                
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <nav class="kutijica">
+        <a href="index.html">Home</a> / <a href="#">Vijesti</a> 
+    </nav>
+  <div class="container">
+    <div class="flex-container">
+      <div class="main-content">
+        <h1>Obilježili smo Dan vozača i automehaničara</h1>
+        <p class="date">15. januar 2025.</p>
+        <div class="content">
+          <p class="prvaKlasa">Ovaj poseban dan je prilika da se oda priznanje svim vozačima i automehaničarima koji svojim radom osiguravaju svakodnevno funkcionisanje javnog prijevoza.</p>
+          <img src="/images/15januar.jpg" alt="ljudi ispred autobusa Centrotransa" width="850px" height="422px">
+          <p>Danas smo obilježili Međunarodni dan vozača i automehaničara, 15. januar, nastavljajući dugogodišnju tradiciju koja traje još od samih početaka naše kompanije. Ovaj dan, koji se u svijetu obilježava od 1960. godine, mi smo počeli slaviti nekoliko godina nakon toga, a prilika je da oda priznanje svim vozačima i automehaničarima koji svojim predanim radom omogućavaju nesmetano funkcionisanje javnog prijevoza.</p>
+          <p>Svečanost smo organizovali u saradnji sa Udruženjem vozača i automehaničara, a posebno smo se posvetili onima čiji doprinos i posvećenost prevazilaze očekivanja i čine razliku u svakodnevnom radu.</p>
+          <p><b>Dr. sc. Safudin Čengić</b>, predsjednik uprave Centrotransa, istakao je značaj ove profesije: „Naši vozači i automehaničari nisu samo oslonac naše kompanije, već i ključni činilac u životima naših putnika. Njihova posvećenost sigurnosti, profesionalizam i svakodnevni napori su temelj na kojem gradimo povjerenje sa korisnicima naših usluga.“</p>
+          <p>Ministar saobraćaja Kantona Sarajevo, <b>Adnan Šteta</b>, prisustvovao je obilježavanju ovog važnog datuma i naglasio nezamjenjivu ulogu vozača i automehaničara za cijelu zajednicu: „Bez njih, javni prijevoz bi bio nezamisliv. Ovo je prilika da im zahvalimo na svemu što rade i da istaknemo koliko cijenimo njihov trud i zalaganje.“</p>
+          <p>Takođe, tokom ceremonije, nagradili smo pojedince koji su se posebno istakli svojim radom tokom protekle godine. Glavno priznanje za vozača pripalo je <b>Aliji Okeriću</b>, koji je rekao: „Ova nagrada nije samo priznanje meni, već svim mojim kolegama koji svakodnevno daju sve od sebe kako bi putnici sigurno stigli na svoja odredišta.“</p>
+          <p>Nagrada za automehaničara godine otišla je <b>Edibu Hasečiću</b>, koji je rekao: „Ponosan sam što sam dio tima koji ulaže maksimalan trud kako bi naš vozni park uvijek bio spreman i siguran za putnike.“</p>
+          <p>Ova svečanost nas je podsjetila na značaj kontinuiranog ulaganja u edukaciju, opremu i bolje uslove rada za naše kolege. „Samo zajedničkim trudom i sinergijom svih nas možemo osigurati još kvalitetniju uslugu za naše putnike,“ zaključio je <b>Nermin Mahmutović</b>, predsjednik Udruženja vozača i automehaničara, dodajući da je ukupno nagrađeno 27 pojedinaca iz sektora saobraćaja i održavanja autobusa.</p>
+        </div>
+      </div>
+      <div class="sidebar">
+        <ul>
+            <li>
+                <span class="date">15.01.2025</span>
+                <a href="danVozaca.html">
+                  <br>
+                  <span class="text">Obilježili smo Dan vozača i automehaničara</span>
+                </a>
+              </li>
+              <li>
+                <span class="date">31.12.2024</span>
+                <br>
+                <span class="date">Rezultati 2024. godine kao odraz planiranja i zajedničke vizije</span>
+
+                <a href="tradicionalnoDruzenje.html">
+                  <br>
+                  <span class="text">Tradicionalno novogodišnje druženje</span>
+                </a>
+              </li>
+              <li>
+                <span class="date">28.12.2024</span>
+                <a href="djedMrazUCentrotransu.html">
+                  <br>
+                  <span class="text">Djed Mraz u Centrotransu: Radost mališana i praznična čarolija</span>
+                </a>
+              </li>
+        </ul>
+        <h3>Više vijesti</h3>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="section">
+    <div class="left">
+        <h1>Putujte s osmijehom!</h1>
+        <p>Putujte brzo i jednostavno uz Centrotrans mobilnu platformu! Uštedite vrijeme i izbjegnite gužve na blagajnama. Kupite svoju kartu u nekoliko klikova, bilo kada i bilo gdje.</p>
+        <div class="store-buttons">
+            <a href="https://play.google.com/store/apps/details?id=com.kentkart.centrotransbus&hl=hr&pli=1">
+                <img src="images/googleplay.png" alt="Google Play">
+            </a>
+            <a href="https://apps.apple.com/hr/app/centrocard/id1483773456">
+                <img src="images/appstore.png" alt="App Store">
+            </a>
+        </div>
+        <div class="qr-code">
+            <img src="images/app_qr_code.svg" alt="QR Code">
+        </div>
+    </div>
+    <div class="right">
+        <img src="images/centroAplikacija.png" alt="telefon">
+    </div>
+</div>
+
+<!-- KRAJ SEKCIJE  -->
+
+
+
+<!-- SEKCIJA STANICE -->
+
+<div class="footer-section">
+    <div>
+      <h3>Putovanje</h3>
+      <ul>
+        <li>Putovanje u Austriju</li>
+        <li>Putovanje u Crnu Goru</li>
+        <li>Putovanje u Češku</li>
+        <li>Putovanje u Francusku</li>
+        <li>Putovanje u Hrvatsku</li>
+        <li>Putovanje u Njemačku</li>
+        <li>Putovanje u Slovačku</li>
+        <li>Putovanje u Sloveniju</li>
+        <li>Putovanje u Srbiju</li>
+        <li>Putovanje u Bosnu i Hercegovinu</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Autobuske linije</h3>
+      <ul>
+        <li>Sarajevo - Beč</li>
+        <li>Sarajevo - Pariz</li>
+        <li>Sarajevo - Hamburg</li>
+        <li>Sarajevo - Dortmund</li>
+        <li>Sarajevo - Bremen</li>
+        <li>Sarajevo - Ljubljana</li>
+        <li>Sarajevo - Zagreb</li>
+        <li>Sarajevo - Split</li>
+        <li>Sarajevo - Dubrovnik</li>
+        <li>Sarajevo - Ulcinj</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Autobuske karte</h3>
+      <ul>
+        <li>Autobus za Banja Luku</li>
+        <li>Autobus za Bihać</li>
+        <li>Autobus za Bijeljinu</li>
+        <li>Autobus za Brčko</li>
+        <li>Autobus za Bugojno</li>
+        <li>Autobus za Goražde</li>
+        <li>Autobus za Gradačac</li>
+        <li>Autobus za Mostar</li>
+        <li>Autobus za Tuzlu</li>
+        <li>Autobus za Zenicu</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Servisi i usluge</h3>
+      <ul>
+        <li>Centrotours</li>
+        <li>Centrotrade</li>
+        <li>Centrotrans PGS</li>
+        <li>Autoškola Centrotrans</li>
+        <li>CentroShop</li>
+        <li>Centroservis</li>
+        <li>Centar za edukaciju - CeC</li>
+        <li>Štamparija</li>
+        <li>Centrotrans I. Sarajevo</li>
+      </ul>
+    </div>
+  </div>
+
+<!-- KRAJ SEKCIJE  -->
+
+
+<!-- FOOTER -->
+<!-- ZADNJI DIO  -->
+
+  <div class="prijavaKorisnika">
+    <div class="sekcija">
+        <h3 style="padding-left: 100px;">Prijava korisnika</h3>
+        <p>Kako bi lakše obavili kupovinu karte možete se prijaviti.</p>
+        <p>Ukoliko još nemate <b>moj.Centrotrans</b> račun, isti možete kreirati <a href="#"><b>ovdje</b></a>.</p>
+                <a href="prijavaKorisnika.html" class="dugme123">Prijava korisnika</a>
+
+    </div>
+
+    <div class="sekcija">
+        <h3 style="padding-left:245px">Kupci</h3>
+        <ul class="lista-kupci" style="padding-left:245px">
+            <li><a href="#">Korisnička podrška</a></li>
+            <li><a href="#">Vaše mišljenje</a></li>
+            <li><a href="#">Često postavljana pitanja</a></li>
+            <li><a href="#">Sigurnost plaćanja</a></li>
+            <li><a href="#">Politika privatnosti</a></li>
+            <li><a href="#">Opšti uslovi poslovanja</a></li>
+            <li><a href="#">Opšti uslovi CentroCard</a></li>
+        </ul>
+    </div>
+
+    <div class="sekcija">
+        <h3>Centrotrans</h3>
+        <ul class="lista-centrotrans">
+            <li><a href="#">O kompaniji</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Ljudski resursi</a></li>
+            <li><a href="#">Kontakt</a></li>
+        </ul>
+
+        <div class="ikone-društvenih-mreža">
+           <a href="https://www.facebook.com/centrotrans.official">
+            <img src="images/icon_facebook.svg" alt="fb" class="ikona-mreže">
+           </a>
+           <a href="https://www.instagram.com/centrotrans.official/"> 
+            <img src="images/icon_instagram.svg" alt="insta" class="ikona-mreže">
+           </a>
+        </div>
+    </div>
+</div>
+
+
+<!-- OVAJ DIO JE NA SVAKOJ STRANICI ISTI  -->
+
+  <div class="footer-bottom">
+    <div>
+      <p>Copyright (c) Centrotrans d.d. Sarajevo. Sva prava zadržana.Web development Promotim</p>
+    </div>
+    <div class="payment-methods">
+        <a href=https://www.unicredit.ba/ba/stanovnistvo.html>
+          <img src="images/payweb.png" alt="payweb">
+        </a>
+        <a href=https://www.mastercard.ba/bs-ba.html>
+          <img src="images/mastercard.png" alt="Mastercard">
+        </a>
+        <a href=https://www.mastercard.ba/bs-ba.html>
+          <img src="images/maestro.png" alt="Maestro">
+        </a>
+        <a href=https://www.visasoutheasteurope.com/bosnia-n-herzegovina.html>
+          <img src="images/visa.png" alt="Visa">
+        </a>
+      </div>
+      
+  </div>
+</body>
+</html>

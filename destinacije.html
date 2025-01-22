@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinacije</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="images/logoTab-removebg-preview.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Barlow Semi Condensed', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #212529;
+        }
+
+        .kutijica {
+            font-size: 15px;
+            color: #7b858d;
+            margin: 20px 20px 0 20px;
+            margin-left: 105px;
+            margin-top: 48px ;
+            padding-bottom: 0px;
+            display: block;           
+            align-items: flex-start; 
+            flex-wrap: wrap;         /* omogucava prelazak na sljedeći red ako je potrebno */
+        }
+
+        .kutijica a {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        .kutijica a:hover {
+            text-decoration: underline;
+        }
+
+        .kutija {
+            max-width: 800px;
+            margin: 0;
+            padding-top: 0;
+            margin-left: 85px;
+            background: #fff;
+            padding: 0 20px;
+            margin-bottom: 80px;
+        }
+
+        h1 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 38px;
+            font-weight: 500;
+            margin-bottom: 10px;
+            margin-top: 0px;
+        }
+
+        .prvaKlasa{
+            font-family: 'Barlow Semi Condensed', sans-serif;
+            font-size: 20px;
+            font-weight: 300;
+            margin: 8px 0px 30px;
+            width: 730px;
+            padding-bottom: 15px;
+        }
+
+        .drugaKlasa{
+            width: 1290px;
+        }
+
+        p {
+            margin: 10px 0;
+            font-size: 16px;
+            line-height: 1.4;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Logo -->
+        <a href="index.html"><img src="images/centroLogo.png" alt="nema logo-a" class="logo"></a>
+    
+        <nav>
+            <!-- Gornji text  -->
+            <ul class="top-nav">
+                <li><a href="mjesecne.html" style="font-size: 14px;">Mjesečne karte</a></li>
+                <li><a href="" style="font-size: 14px">Karijera</a></li>
+                <li class="flag-container">
+                    <img src="images/ba.png" alt="BiH zastava" class="flag" width="20px" height="20px">
+                    <a href="" style="font-size: 14px">Bosnia and Herzegovina</a>
+                </li>
+                <!-- padajuci meni  -->
+                <ul class="dropdown">
+                    <li><a href="#">BAM <i class="padajuciMeni"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">BAM</a></li>
+                            <li><a href="#">EUR</a></li>
+                        </ul>
+                    </li>
+                </ul>                
+                <ul class="dropdown">
+                    <li><a href="#">BA <i class="padajuciMeni"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">BA</a></li>
+                            <li><a href="#">EN</a></li>
+                            <li><a href="#">DE</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                            </ul>
+    
+            <!-- Donji text nava -->
+            <ul class="bottom-nav">
+                <li><a href="questions.html"style="font-size: 18px;font-family: 'Barlow Condensed', sans-serif;">Odaberi putovanje</a></li>
+                <li><a href="kupuj.html"style="font-size: 18px;font-family: 'Barlow Condensed', sans-serif;">Kupi i putuj</a></li>
+                <li><a href="destinacije.html"style="font-size: 18px;font-family: 'Barlow Condensed', sans-serif;">Otkrij destinacije</a></li>
+                <li class="flag-container">
+                    <img src="images/icons8-user-30.png" alt="User"  width="20px" height="20px">
+                    <a href="prijavaKorisnika.html"style="font-size: 18px;font-family: 'Barlow Condensed', sans-serif;">moj.Centrotrans</a>                
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <nav class="kutijica">
+        <a href="index.html">Home</a> / <a href="destinacije.html">Otkrijte destinacije</a> / <a href="destinacije.html">Destinacije</a>
+    </nav>
+
+    <div class="kutija">
+        <h1>Destinacije</h1>
+        <p class="prvaKlasa">Putovanje autobusom kroz Europu je jedinstveno iskustvo koje obuhvata uživanje u bogatoj historiji, raznolikoj kulturi i tradiciji. Ako ste u potrazi za nezaboravnim avanturama i želite istražiti različite dijelove Evrope, Centrotrans je pravi izbor za vas.</p>
+
+        <p class="drugaKlasa">Naša autobusna kompanija nudi usluge putovanja u 10 evropskih zemalja, omogućavajući vam da se uputite u putovanje kroz različite regije i doživite njihovu jedinstvenost.</p>
+
+        <p class="drugaKlasa">Bez obzira da li se odlučite za posjetiti alpske vrhove <a href="#">Austrije</a>, netaknutu prirodu <a href="#">Crne Gore</a>, romantične gradove <a href="#">Francuske</a>, jadransku obalu <a href="#">Hrvatske</a>, zelene krajolike <a href="#">Slovenije</a>, arhitektonska čuda <a href="#">Njemačke</a>, predivne dvorce <a href="#">Češke</a> i <a href="#">Slovačke</a>, živopisne krajeve <a href="#">Srbije</a> ili se ipak odlučite za istraživanje kulturnološkog bisera Balkana – <a href="#">Bosne i Hercegovine</a>, sigurno ćete biti oduševljeni raznolikošću koju Evropa ima da ponudi.</p>
+
+        <p class="drugaKlasa">Naša putovanja pružaju izvanrednu priliku da otkrijete historijske gradove sa znamenitostima koje odišu prošlim vremenima. Prošetajte baroknim vrtovima Beča, divite se ljepoti pariškog Eiffelovog tornja ili se uputite u avanturu istraživanja praškog starog grada. Svaki grad ima svoju priču i svaki korak na vašem putovanju otkriva nove tajne starog kontinenta.</p>
+
+        <p class="drugaKlasa">Evropa je poznata po svojoj raznolikoj kulturi i tradiciji. Na putovanjima s Centrotransom imate priliku da se upoznate s različitim kulinarskim specijalitetima, umjetnošću, muzikom i festivalima koji obogaćuju ovaj kontinent. Iskusite niz ukusa, mirisa i zvukova koji vam omogućavaju da se uronite u autentičnu evropsku atmosferu.</p>
+
+        <p class="drugaKlasa">Kada putujete s Centrotransom, možete se opustiti i uživati u udobnosti naših autobusa. Naša posvećena ekipa vozača i osoblja stoji vam na raspolaganju kako bi vaše putovanje bilo sigurno, udobno i nezaboravno.</p>
+    </div>
+    <div class="section">
+        <div class="left">
+            <h1>Putujte s osmijehom!</h1>
+            <p>Putujte brzo i jednostavno uz Centrotrans mobilnu platformu! Uštedite vrijeme i izbjegnite gužve na blagajnama. Kupite svoju kartu u nekoliko klikova, bilo kada i bilo gdje.</p>
+            <div class="store-buttons">
+                <a href="https://play.google.com/store/apps/details?id=com.kentkart.centrotransbus&hl=hr&pli=1">
+                    <img src="images/googleplay.png" alt="Get it on Google Play">
+                </a>
+                <a href="https://apps.apple.com/hr/app/centrocard/id1483773456">
+                    <img src="images/appstore.png" alt="Download on the App Store">
+                </a>
+            </div>
+            <div class="qr-code">
+                <img src="images/app_qr_code.svg" alt="QR Code">
+            </div>
+        </div>
+        <div class="right">
+            <img src="images/centroAplikacija.png" alt="telefon">
+        </div>
+    </div>
+    
+    <!-- KRAJ SEKCIJE  -->
+    
+    
+    
+    <!-- SEKCIJA STANICE -->
+    
+    <div class="footer-section">
+        <div>
+          <h3>Putovanje</h3>
+          <ul>
+            <li>Putovanje u Austriju</li>
+            <li>Putovanje u Crnu Goru</li>
+            <li>Putovanje u Češku</li>
+            <li>Putovanje u Francusku</li>
+            <li>Putovanje u Hrvatsku</li>
+            <li>Putovanje u Njemačku</li>
+            <li>Putovanje u Slovačku</li>
+            <li>Putovanje u Sloveniju</li>
+            <li>Putovanje u Srbiju</li>
+            <li>Putovanje u Bosnu i Hercegovinu</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Autobuske linije</h3>
+          <ul>
+            <li>Sarajevo - Beč</li>
+            <li>Sarajevo - Pariz</li>
+            <li>Sarajevo - Hamburg</li>
+            <li>Sarajevo - Dortmund</li>
+            <li>Sarajevo - Bremen</li>
+            <li>Sarajevo - Ljubljana</li>
+            <li>Sarajevo - Zagreb</li>
+            <li>Sarajevo - Split</li>
+            <li>Sarajevo - Dubrovnik</li>
+            <li>Sarajevo - Ulcinj</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Autobuske karte</h3>
+          <ul>
+            <li>Autobus za Banja Luku</li>
+            <li>Autobus za Bihać</li>
+            <li>Autobus za Bijeljinu</li>
+            <li>Autobus za Brčko</li>
+            <li>Autobus za Bugojno</li>
+            <li>Autobus za Goražde</li>
+            <li>Autobus za Gradačac</li>
+            <li>Autobus za Mostar</li>
+            <li>Autobus za Tuzlu</li>
+            <li>Autobus za Zenicu</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Servisi i usluge</h3>
+          <ul>
+            <li>Centrotours</li>
+            <li>Centrotrade</li>
+            <li>Centrotrans PGS</li>
+            <li>Autoškola Centrotrans</li>
+            <li>CentroShop</li>
+            <li>Centroservis</li>
+            <li>Centar za edukaciju - CeC</li>
+            <li>Štamparija</li>
+            <li>Centrotrans I. Sarajevo</li>
+          </ul>
+        </div>
+      </div>
+    
+    <!-- KRAJ SEKCIJE  -->
+    
+    
+    <!-- FOOTER -->
+    <!-- ZADNJI DIO  -->
+    
+      <div class="prijavaKorisnika">
+        <div class="sekcija">
+            <h3 style="padding-left: 100px;">Prijava korisnika</h3>
+            <p>Kako bi lakše obavili kupovinu karte možete se prijaviti.</p>
+            <p>Ukoliko još nemate <b>moj.Centrotrans</b> račun, isti možete kreirati <a href="#"><b>ovdje</b></a>.</p>
+                    <a href="prijavaKorisnika.html" class="dugme123">Prijava korisnika</a>
+
+        </div>
+    
+        <div class="sekcija">
+            <h3 style="padding-left:245px">Kupci</h3>
+            <ul class="lista-kupci" style="padding-left:245px">
+                <li><a href="#">Korisnička podrška</a></li>
+                <li><a href="#">Vaše mišljenje</a></li>
+                <li><a href="#">Često postavljana pitanja</a></li>
+                <li><a href="#">Sigurnost plaćanja</a></li>
+                <li><a href="#">Politika privatnosti</a></li>
+                <li><a href="#">Opšti uslovi poslovanja</a></li>
+                <li><a href="#">Opšti uslovi CentroCard</a></li>
+            </ul>
+        </div>
+    
+        <div class="sekcija">
+            <h3>Centrotrans</h3>
+            <ul class="lista-centrotrans">
+                <li><a href="#">O kompaniji</a></li>
+                <li><a href="#">Press</a></li>
+                <li><a href="#">Ljudski resursi</a></li>
+                <li><a href="#">Kontakt</a></li>
+            </ul>
+    
+            <div class="ikone-društvenih-mreža">
+               <a href="https://www.facebook.com/centrotrans.official">
+                <img src="images/icon_facebook.svg" alt="fb" class="ikona-mreže">
+               </a>
+               <a href="https://www.instagram.com/centrotrans.official/"> 
+                <img src="images/icon_instagram.svg" alt="insta" class="ikona-mreže">
+               </a>
+            </div>
+        </div>
+    </div>
+    
+    
+    <!-- OVAJ DIO JE NA SVAKOJ STRANICI ISTI  -->
+    
+      <div class="footer-bottom">
+        <div>
+          <p>Copyright (c) Centrotrans d.d. Sarajevo. Sva prava zadržana.Web development Promotim</p>
+        </div>
+        <div class="payment-methods">
+            <a href=https://www.unicredit.ba/ba/stanovnistvo.html>
+              <img src="images/payweb.png" alt="payweb">
+            </a>
+            <a href=https://www.mastercard.ba/bs-ba.html>
+              <img src="images/mastercard.png" alt="Mastercard">
+            </a>
+            <a href=https://www.mastercard.ba/bs-ba.html>
+              <img src="images/maestro.png" alt="Maestro">
+            </a>
+            <a href=https://www.visasoutheasteurope.com/bosnia-n-herzegovina.html>
+              <img src="images/visa.png" alt="Visa">
+            </a>
+          </div>
+          
+      </div>
+
+</body>
+</html>
